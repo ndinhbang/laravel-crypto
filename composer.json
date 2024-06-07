@@ -1,0 +1,48 @@
+{
+  "name": "ndinhbang/laravel-crypto",
+  "description": "Platform-Agnostic Security Tokens",
+  "license": "ISC",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Paragon Initiative Enterprises",
+      "email": "security@paragonie.com"
+    },
+    {
+      "name": "Nguyen Dinh Bang",
+      "email": "ndinhbang111@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ParagonIE\\Paseto\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ParagonIE\\Paseto\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "ext-json": "*",
+    "ext-sodium": "*",
+    "php": "^8.2",
+    "paragonie/corner": "^2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10",
+    "vimeo/psalm": "^5"
+  },
+  "scripts": {
+    "full-test": [
+      "@static-analysis",
+      "@test"
+    ],
+    "static-analysis": "psalm",
+    "test": "phpunit"
+  },
+  "suggest": {
+    "ext-sodium": "Better performance for PASETO v4, secure memory zeroing",
+    "paragonie/paserk": "Key serialization, key wrapping, canonical key identification"
+  }
+}
